@@ -2,6 +2,14 @@ const form = document.getElementById('userForm');
 const statusMessage = document.getElementById('statusMessage');
 const saveBtn = document.getElementById('saveBtn');
 
+const configPromise = fetch('./config.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Unable to load config.json');
+        }
+        return response.json();
+    });
+
 function showStatus(type, message) {
     statusMessage.className = `status ${type}`;
     statusMessage.textContent = message;
@@ -27,11 +35,13 @@ form.addEventListener('submit', async (e) => {
     const timeout = setTimeout(() => controller.abort(), 8000);
 
     try {
-        const response = await fetch('https://personal-cnt5ftwz.outsystemscloud.com/SaveAPI/rest/GetInfo/CreateInfo', {
+        const { API_URL, SECRET_KEY } = await configPromise;
+
+        const response = await fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'SecretKey': '123456'
+                'SecretKey': SECRET_KEY
             },
             body: JSON.stringify(payload),
             signal: controller.signal
