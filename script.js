@@ -2,6 +2,10 @@ const form = document.getElementById('userForm');
 const statusMessage = document.getElementById('statusMessage');
 const saveBtn = document.getElementById('saveBtn');
 
+
+
+
+
 const configPromise = fetch('./config.json')
     .then(response => {
         if (!response.ok) {
@@ -65,3 +69,32 @@ form.addEventListener('submit', async (e) => {
         saveBtn.textContent = 'Save Data';
     }
 });
+
+// Adding Animal List
+const StartIndex = 0;
+const MaxRecords = 4;
+
+fetch(`https://personal-cnt5ftwz.outsystemscloud.com/SaveAPI/rest/GetPetsList/GetPets?StartIndex=${StartIndex}&MaxRecords=${MaxRecords}`)
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById("petContainer").innerHTML =
+            data.map(pet => `
+   <div class="card">
+   
+      <img  class="img-height-width"
+      src="data:image/png;base64,${pet.Image}" 
+      alt="${pet.Name}"
+      loading="lazy"
+      />
+
+      <h2>${pet.Name}</h2>
+
+      <span>${pet.Status}</span>
+
+      <button>View Details</button>
+
+   </div>
+`).join('');
+
+    });

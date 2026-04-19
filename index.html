@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <title>Save User</title>
     <link rel="stylesheet" href="test.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="nav-menu">
     <a class="hover-underline" href="index.html">Home</a>
-    <a class="hover-underline" href="contact.html">Contact</a>
+    <a class="hover-underline" href="blog.html">Blog</a>
+     <a class="hover-underline" href="contact.html">Contact</a>
 </div>
 
 
-<img src="Images/pexels-wanderkash-20816519.jpg" alt="cat" style="width:100%;height: 90em;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<img src="https://images.pexels.com/photos/34071784/pexels-photo-34071784.jpeg" alt="cat" style="width:100%;height: 90em;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 <div class="cont-out">
-    <p class="p-img-text">They offer comforting companionship that easily melts away the stress of a long day. Whether eagerly greeting us at the door or simply curling up by our side, their loyal presence makes a house truly feel like a home.</p>
+    <p class="font-size-20 text-color-neutral-0 padding-20 padding-left-base">They offer comforting companionship that easily melts away the stress of a long day. </p>
+
+    <p class="p-img-text text-color-neutral-0 padding-20 padding-left-base">Whether eagerly greeting us at the door or simply curling up by our side, their loyal presence makes a house truly feel like a home.</p>
+    <div class="padding-m padding-left-base">
+        <button class="adapt-friend-btn" onclick="">Adapt a Friend</button>
+        <button class="explore-btn" onclick="">Learn More</button>
+    </div>
+
+    <div class="explore-more-container padding-left-base">
+        <i data-lucide="move-up-right" class="explore-more-icon"></i>
+        <p onclick="">Explore More</p>
+    </div>
 </div>
 <div class="left-side-text">
     <div class="cont-out2">
@@ -24,6 +37,17 @@
 </div>
 
 <!-- Animals cards -->
+<div class="animals-cards">
+    <div id="petContainer">
+        <!-- Skeleton cards shown first -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+    </div>
+
+</div>
+
+<div class="height-24em">
 <div class="display-flex-cards">
     <div class="animal-card">
         <img class="img-inherit" src="Images/pexels-yuen-2160809509-37031055.jpg" alt="dog" >
@@ -35,7 +59,10 @@
         <img class="img-inherit" src="Images/pexels-yuen-2160809509-37031055.jpg" alt="dog" >
     </div>
 </div>
+</div>
 <!--Rotating cards-->
+
+<div>
 <div class="container1">
     <div class="carousel">
         <div class="carousel__face"><span>Failure isn't an option</span></div>
@@ -77,5 +104,10 @@
 </div>
 </div>
 <script src="script.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
 </html>
