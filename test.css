@@ -42,8 +42,9 @@ a{
     position: absolute;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, #ff0000, #00ffff);
-    bottom: 0px;
+    background: black;
+    /*background: linear-gradient(to right, #ff0000, #00ffff);*/
+    bottom: 0;
     left: 0;
     transform: scaleX(0);
     transform-origin: right;
@@ -51,7 +52,7 @@ a{
 }
 
 .hover-underline::before {
-    top: 0px;
+    top: 0;
     transform-origin: left;
 }
 
@@ -71,10 +72,13 @@ a{
     top: 200px;
 }
 .p-img-text2{
-    color: black;
-    width: 311px;
+    color: white;
+    width: 358px;
     padding: 26px;
-    font-size: 20px;
+    font-size: 21px;
+    position: absolute;
+    top: -4vw;
+    right: -28vw;
 }
 .cont-out2{
     display: flex;
@@ -117,7 +121,7 @@ a{
     height: auto;
 }
 .subcribe-cont{
-    padding: 86px 25em;
+    padding: 86px 27vw;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -265,4 +269,81 @@ input:focus {
 
 .api-preview strong {
     color: #111827;
+}
+.subcribe-button-width{
+    width: 10em;
+}
+
+/*Rotating cards css*/
+.container1 {
+    position: relative;
+    width: 320px;
+    margin: 150px auto 0 auto;
+    perspective: 1000px;
+    height: 360px;
+    color: #ffffff;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 10s infinite forwards linear;
+}
+.carousel__face {
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+}
+
+span {
+    margin: auto;
+    font-size: 1rem;
+}
+
+
+.carousel__face:nth-child(1) {
+    background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) {
+    background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+    background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+    background-image: url("https://www.gconnect.in/gc22/wp-content/uploads/2022/09/Stepping-up-of-pay.jpg");
+    transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) {
+    background-image: url("https://wikihealth.biz.id/images/step-counts-still-down-after-pandemic-1440x810.jpg");
+    transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) {
+    background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/5568329-en-savoir-plus-gagner-plus-cartoon-vector-illustration-vectoriel.jpg");
+    transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) {
+    background-image: url("https://www.youngisthan.in/wp-content/uploads/2018/03/belief-1280x720.jpg");
+    transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+    background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+    background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
 }
