@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    background: #f3ede3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+
+}
+
+a{
+    color:black;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 300;
+    padding:14px;
+}
+
+/* Menu Hover Effect */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: 0px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: 0px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
+.p-img-text{
+    width: 377px;
+    font-size: 31px;
+    padding: 22px;
+    color: wheat;
+}
+.cont-out{
+    position: absolute;
+    top: 200px;
+}
+.p-img-text2{
+    color: black;
+    width: 311px;
+    padding: 26px;
+    font-size: 20px;
+}
+.cont-out2{
+    display: flex;
+    justify-content: end;
+}
+.left-side-text{
+    position: absolute;
+    top: 68em;
+    left: 68%;
+}
+.animal-card{
+    height: 33em;
+    width: 23em;
+    border-radius: 10px;
+}
+.animal-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f3ede3;
+}
+
+.img-inherit{
+    height: inherit;
+    width: inherit;
+    border-radius: 8px;
+}
+.display-flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.display-flex-cards{
+    display:flex;
+    justify-content: space-between;
+    padding: 62px;
+
+}
+.subscribe-section{
+    background: #f3ede3;
+    height: auto;
+}
+.subcribe-cont{
+    padding: 86px 25em;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.margin-top-base{
+    margin-top: 20px;
+}
+.font-xs{
+    font-size: 12px;
+}
+.text-align-center{
+    text-align: center;
+}
+.font-semi-bold{
+    font-weight: 500;
+}
+.subcribe-button-width{
+    width: auto;
+    padding: 12px 32px;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 28px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+.status.success {
+    display: block;
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.status.error {
+    display: block;
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.status.loading {
+    display: block;
+    background: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: #5562ff;
+    color: white;
+    height: 6em;
+    text-align: center;
+    padding: 30px;
+}
+
+.api-preview {
+    margin-top: 18px;
+    background: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 12px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.api-preview strong {
+    color: #111827;
+}
